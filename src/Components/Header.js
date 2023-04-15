@@ -54,8 +54,7 @@ const Header = ({ theme }) => {
           padding: "10px",
         }}
       >
-        {/* <StyledLogo src="./logo.png" alt="logo"  /> */}
-        <StyledLogoWrapper>
+        {/* <StyledLogoWrapper>
           <StyledSvg>
             <Typography
               sx={{
@@ -67,12 +66,12 @@ const Header = ({ theme }) => {
               Mukul_bairwa
             </Typography>
           </StyledSvg>
+        </StyledLogoWrapper> */}
+
+        <StyledLogoWrapper>
+          <StyledLogo  src="/logocolorNew.png"  alt="logo" />
         </StyledLogoWrapper>
 
-       
-
-
-        {/* <Box> */}
           <StyledMenu>
             {headerList.map((item, key) => {
               return (
@@ -89,7 +88,6 @@ const Header = ({ theme }) => {
             })}
             <StyledButton href="#contact">Get Connect</StyledButton>
           </StyledMenu>
-        {/* </Box> */}
         <div className="mobilemenu">
             <FiMenu  style={{color:"gray"}} onClick={()=>setIsOpen((prev)=>!prev)} />
 
@@ -104,7 +102,13 @@ const Header = ({ theme }) => {
 
 export default Header;
 
-const StyledLogoWrapper = styled("div")({});
+const StyledLogoWrapper = styled("div")({
+  maxWidth:"200px"
+});
+
+const StyledLogo = styled("img")({
+  width:"100%"
+})
 
 const StyledSvg = styled("div")({
   // width:"400px"
