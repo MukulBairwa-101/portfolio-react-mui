@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import About from "./Components/About/About";
+import Portfolio from "./Components/Portfolio/Portfolio";
+import Tech from "./Components/Skills/Tech";
 
-function App() {
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "./Theme/Theme";
+import Contact2 from "./Components/Contact/Contact2";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Header theme={theme} />
+      <ToastContainer />
+      <Home />
+      <About />
+      <Tech />
+      <Portfolio />
+      <Contact2 />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
