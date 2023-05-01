@@ -92,6 +92,14 @@ const PortfolioData = [
     link: "https://spot-on-moment.netlify.app/",
     btnActive: false,
   },
+  {
+    index: 4,
+    title: "Age calculator frontendmentor.io challenge ",
+    description: "Javascript age calculator build for frontendmentor.io challenge ",
+    img: "./agecalculator.png",
+    link: "https://keen-shortbread-211b38-agecalculator.netlify.app/",
+    btnActive: false,
+  },
 ];
 
 const Portfolio = () => {
