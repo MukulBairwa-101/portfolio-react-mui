@@ -8,36 +8,58 @@ const StyledContainer = styled("Container")({
   justifyContent: "space-around",
   flexDirection: "column",
   margin: "5px",
-  padding: "50px",
+  padding: "40px",
 
   [theme.breakpoints.up("md")]: {
     margin: "50px 20px",
   },
 });
 
+// const StyledContainer = styled("div")({
+//   color: "#fff",
+//   padding: "0px",
+//   display: "flex",
+//   justifyContent: "space-around",
+//   flexDirection: "column",
+
+//   [theme.breakpoints.down("sm")]: {
+//     padding: "20px",
+//   },
+// });
+
 const PortfolioCardWrapper = styled("Box")({
   display: "flex",
   justifyContent: "center",
   gap: "40px",
   flexWrap: "wrap",
+  // background:"url('/wave3.png')",
+  // backgroundRepeat: 'no-repeat',
+
+  [theme.breakpoints.up("md")]: {
+    margin: "80px 0px",
+  },
+
 });
 
 const WorkCard = styled("div")({
   margin: "20px 0px",
   position: "relative",
   borderRadius: "10px",
-  maxWidth: "350px",
+  maxWidth: "300px",
+  "&:hover": {
+    boxShadow:'1px solid gray',
+  },
 });
 
 const Workimg = styled("img")({
-  maxWidth: "350px",
+  maxWidth: "300px",
   width: "100%",
   height: "220px",
   objectFit: "cover",
   objectPosition: "center",
   borderRadius: "10px",
   cursor: "pointer",
-  "&:hover": {
+    "&:hover": {
     opacity: ".9",
   },
 });
@@ -51,7 +73,7 @@ const WorkButton = styled("a")({
   display: "none",
   position: "absolute",
   top: 100,
-  left: 120,
+  left: 100,
   fontSize: "12px",
   backgroundColor: "#4F687F",
   padding: "10px 30px",
@@ -61,6 +83,15 @@ const WorkButton = styled("a")({
 const PortfolioData = [
   {
     index: 0,
+    title: "Getmail",
+    description:
+      "' MERN ' mailbox. ",
+    img: "./getmail.png",
+    link: "https://getmail.netlify.app/",
+    btnActive: false,
+  },
+  {
+    index: 1,
     title: "QTBlogs",
     description:
       "QTBlogs is a Blog platform for writing and sharing your thoughts with the everyone out there . ",
@@ -69,7 +100,7 @@ const PortfolioData = [
     btnActive: false,
   },
   {
-    index: 1,
+    index: 2,
     title: "NetflixShows",
     description: "NetflixShows is a movie and shows watch website . ",
     img: "./netflixshows.png",
@@ -77,7 +108,7 @@ const PortfolioData = [
     btnActive: false,
   },
   {
-    index: 2,
+    index: 3,
     title: "Shopmart",
     description: "An E-Commerce platform",
     img: "./shopmart.png",
@@ -85,7 +116,7 @@ const PortfolioData = [
     btnActive: false,
   },
   {
-    index: 3,
+    index: 4,
     title: "Spot On",
     description: "React infinite scrolling ",
     img: "./spoton2.png",
@@ -93,7 +124,7 @@ const PortfolioData = [
     btnActive: false,
   },
   {
-    index: 4,
+    index: 5,
     title: "Age calculator frontendmentor.io challenge ",
     description: "Javascript age calculator build for frontendmentor.io challenge ",
     img: "./agecalculator.png",
@@ -118,6 +149,13 @@ const Portfolio = () => {
       <Typography variant="h3" style={{ textAlign: "center" }}>
         Portfolio
       </Typography>
+      <Typography
+        variant="p"
+        style={{ textAlign: "center", color: "#778D99", margin: "20px" }}
+      >
+        check out some of my work 
+      </Typography>
+      {/* <img src="/wave.png" /> */}
 
       <PortfolioCardWrapper>
         {PortfolioData.map((data, key) => {

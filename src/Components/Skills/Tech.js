@@ -17,7 +17,7 @@ const StyledContainer = styled("Container")({
 });
 
 const SkillsContainer = styled("Container")({
-  backgroundColor: "#1d232f",
+  // backgroundColor: "#1d232f",
   display: "flex",
   justifyContent: "space-evenly",
   flexWrap: "wrap",
@@ -25,6 +25,7 @@ const SkillsContainer = styled("Container")({
   padding: "50px",
   margin: "20px 70px",
   borderRadius: "20px",
+   background:"url('/wave4.png')",
   [theme.breakpoints.down("sm")]: {
     padding: "25px",
     margin: "20px 30px",
